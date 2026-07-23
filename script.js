@@ -249,20 +249,171 @@
 //   console.log(student.address ?.city);
 //   console.log("Hello");
 
-  const attendance1 = "";
+//   const attendance1 = "";
 
-// const displayValue = attendance1 || "No Data";
-// console.log(displayValue);
+// // const displayValue = attendance1 || "No Data";
+// // console.log(displayValue);
 
-const displayValue1 = attendance1 ?? "No Data";
-console.log(displayValue1);
+// const displayValue1 = attendance1 ?? "No Data";
+// console.log(displayValue1);
 
-// import/export
+// // import/export
 
-export function add(a, b) {
-  return a + b;
-}
-
+// export function add(a, b) {
+//   return a + b;
+// }
  
-  
+//   =======================17-07====================================
+//------------------CLASSES-------------------------
+//--------------------------------------------------
+// class Student {
+//     constructor(name, attendance) {
+//         this.name = name;
+//         this.attendance = attendance;
+//     }
+
+//     isEligible() {
+//         return this.attendance >= 80;
+//     }
+
+//     greet() {
+//         return `Hi, I am ${this.name}`;
+//     }
+// }
+
+// const callStudent = new Student("Tanuja", 90);
+
+// console.log(callStudent.greet());
+// console.log(callStudent.isEligible());
+
+// class InternStudent extends Student {
+//     constructor(name, attendance, project) {
+//         super(name, attendance);
+//         this.project = project;
+//     }
+
+//     greet() {
+//         return `Hi, I am ${this.name}, working on ${this.project}`;
+//     }
+// }
+
+// const intern = new InternStudent("Asyushi", 95, "React Project");
+
+// console.log(intern.greet());
+// console.log(intern.isEligible());
+
+
+//------------------------- Promise --------------------------
+// const orderFood = new Promise((resolve, reject) => {
+//   const kitchenHasItems = false;
+
+//   setTimeout(() => {
+//     if (kitchenHasItems) {
+//       resolve("Your food is ready");
+//     } else {
+//       reject("Sorry, we are out of Items");
+//     }
+//   }, 2000);
+// });
+
+// const orderFood1 = new Promise((resolve, reject) => {
+//   const kitchenHasItems = false;
+
+//   setTimeout(() => {
+//     if (kitchenHasItems) {
+//       resolve("Your food is ready");
+//     } else {
+//       reject("Sorry, we are out of Items");
+//     }
+//   }, 2000);
+// });
+
+// const orderFood2 = new Promise((resolve, reject) => {
+//   const kitchenHasItems = false;
+
+//   setTimeout(() => {
+//     if (kitchenHasItems) {
+//       resolve("Your food is ready");
+//     } else {
+//       reject("Sorry, we are out of Items");
+//     }
+//   }, 2000);
+// });
+// // orderFood
+// //   .then((x) => {
+// //     console.log("Success:", x);
+// //   })
+// //   .catch((error) => {
+// //     console.log("Error:", error);
+// //   });
+
+// // console.log("Log before food is ready");
+
+// Promise.all([orderFood, orderFood1, orderFood2]).then((result) => {
+//   console.log(result); //["", "",""]
+// });
+
+// //-------------------- Async/Await --------------------
+
+// async function getFood() {
+//   try {
+//     const result = await orderFood;
+//     console.log("Success:", result);
+//   } catch (err) {
+//     console.log("Error:", err);
+//   }
+// }
+
+// getFood();
+// console.log("get Food Log before food is ready");
+
+
+
+//============20-07============================
+//REST APIs
+
+// GET, POST, PUT, DELETE, PATCH
+
+// CRUD Operations
+
+// fetch("https://api.example.com/students", {
+//   method: "POST",
+//   headers: {
+//     "Content-Type": "application/json",
+//   },
+//   body: {
+//     name: "Tanuja",
+//     attendance: 88,
+//   },
+// });
+
+// fetch("https://api.github.com/users/octocat")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(data);
+//     console.log(data.name);
+//   })
+//   .catch((err) => console.log("Something is wrong: ", err));
+
+
+
+// async function getGitHubUser() {
+//   try {
+//     const response = await fetch("https://api.github.com/users/octocat");
+//        if(!response){
+//         throw new Error("Request Failed with status 400");
+//        }
+//     const data = await response.json();
+//     console.log(data);
+//     console.log(data.name);
+//   } catch (err) {
+//     console.log("Something is wrong: ", err);
+//   }
+// }
+// getGitHubUser();
+
+
+//----------------------------CORS----------------------------
+ 
+
 

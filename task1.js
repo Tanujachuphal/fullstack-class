@@ -58,11 +58,6 @@ for (let i = 0; i < bookings.length; i++) {
   console.log(receiptNote);
 }
 
-// console.log(receiptNote);
-
-// ReferenceError: receiptNote is not defined
-// Because let variables are block scoped.
-
 // ===== Requirement 6 (Bonus): Ternary =====
 
 const applyDiscount2 = (total, tickets) =>
