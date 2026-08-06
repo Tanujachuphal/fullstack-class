@@ -1,11 +1,13 @@
+import { TextField } from "@mui/material";
+
 function SearchBar({ value, onChange }) {
   return (
-    <input
-      type="text"
-      className="search-input"
-      placeholder="Search Products..."
+    <TextField
+      fullWidth
+      label="Search products"
       value={value}
       onChange={(event) => onChange(event.target.value)}
+      sx={{ mb: 3 }}
     />
   );
 }
